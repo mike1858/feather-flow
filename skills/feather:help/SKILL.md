@@ -96,6 +96,14 @@ For larger projects spanning multiple sessions:
 | `/feather:verify` | Checkpoint 2 verification |
 | `/feather:finish` | Complete and merge work |
 
+### Convex Testing
+
+| Skill | When to Use |
+|-------|-------------|
+| `/feather:setup-convex-testing` | Add Convex integration testing (after setup-react-testing) |
+| `/feather:add-convex-auth-testing` | Add auth testing (`<Authenticated>`, `useConvexAuth`) |
+| `/feather:review-convex-tests` | Review test quality (10-point checklist) |
+
 ### Reference
 
 | Skill | When to Use |
@@ -143,8 +151,10 @@ Claude: I'll use /feather:resume-slice to restore context...
 Before using slice workflow, ensure TDD infrastructure:
 
 ```bash
-/feather:setup-tdd-guard      # Core: hooks + coverage (required for all projects)
-/feather:setup-react-testing  # React: jsdom + testing-library (if React project)
+/feather:setup-tdd-guard          # Core: hooks + coverage (required for all projects)
+/feather:setup-react-testing      # React: jsdom + testing-library (if React project)
+/feather:setup-convex-testing     # Convex: convex-test + feather-testing-convex (if Convex project)
+/feather:add-convex-auth-testing  # Convex auth: <Authenticated>, useConvexAuth (if using Convex Auth)
 ```
 
 Core enables:
@@ -159,6 +169,8 @@ Core enables:
 | "What skill should I use?" | `/feather:workflow` shows the decision tree |
 | "How does TDD work here?" | `/feather:setup-tdd-guard` explains enforcement |
 | "How do I test React components?" | `/feather:setup-react-testing` adds component testing |
+| "How do I test Convex apps?" | `/feather:setup-convex-testing` adds Convex integration testing |
+| "Are my Convex tests correct?" | `/feather:review-convex-tests` runs a 10-point quality checklist |
 | "What's a slice?" | Vertical cut of functionality (UI → database) |
 | "Why STOP after each slice?" | Prevents context rot, keeps human in control |
 

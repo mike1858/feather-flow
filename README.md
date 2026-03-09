@@ -4,7 +4,7 @@ A lightweight, TDD-enforced development workflow for Claude Code.
 
 ## Why feather-flow
 
-Most workflow tools for AI coding assistants are heavy — dozens of dependencies, complex configuration, steep learning curves. feather-flow takes the opposite approach: TDD-enforced quality gates at every step, so you ship working code instead of debugging your tooling. It ships as 21 skills with zero dependencies — pure markdown skills, zero runtime dependencies.
+Most workflow tools for AI coding assistants are heavy — dozens of dependencies, complex configuration, steep learning curves. feather-flow takes the opposite approach: TDD-enforced quality gates at every step, so you ship working code instead of debugging your tooling. It ships as 24 skills with zero dependencies — pure markdown skills, zero runtime dependencies.
 
 ## Comparison
 
@@ -72,6 +72,9 @@ Break work into vertical slices, each independently shippable:
 | `/feather:write-tests` | Test | Write tests from derived test cases (TDD) |
 | `/feather:setup-tdd-guard` | Test | Configure TDD enforcement (any stack) |
 | `/feather:setup-react-testing` | Test | Add React testing environment |
+| `/feather:setup-convex-testing` | Test | Add Convex integration testing (add-on to react-testing) |
+| `/feather:add-convex-auth-testing` | Test | Add auth testing for Convex components |
+| `/feather:review-convex-tests` | Test | 10-point quality checklist for Convex tests |
 | `/feather:create-plan` | Plan | Create implementation plan from spec |
 | `/feather:execute` | Execute | Execute plan with quality gates |
 | `/feather:verify` | Verify | Run verification checkpoint |
